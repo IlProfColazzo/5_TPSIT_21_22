@@ -24,7 +24,7 @@ int main()
 	}
 	else if (pidFork>0){
 		//padre
-		for(int i=65; i<=90;i++){
+		for(char i='A'; i<='Z';i++){
 			printf("%c\n",i);
 			sleep(3);
 		}
