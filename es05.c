@@ -21,6 +21,7 @@ int main()
 		for(int i=97; i<=122;i++){
 			printf("%c\n",i);
 		}
+		exit(0);
 	}
 	else if (pidFork>0){
 		//padre
