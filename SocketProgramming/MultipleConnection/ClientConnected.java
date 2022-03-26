@@ -40,7 +40,7 @@ public class ClientConnected extends  Thread{
     }
 
 
-    private String recive() {
+    private String receive() {
         String stringFromClient="";
         try {
             stringFromClient = fromClient.readLine();
