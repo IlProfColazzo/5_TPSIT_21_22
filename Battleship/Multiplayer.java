@@ -24,7 +24,7 @@ public class Multiplayer {
                 s.waitConnection();
                 socket = s.getSocket();
                 valida = true;
-            } else if (HoC.equals("hostami")) {
+            } else if (HoC.equals("connettimi")) {
                 Client c = new Client("127.0.0.1", 7000);
                 c.connect();
                 socket = c.getSocket();
@@ -38,16 +38,26 @@ public class Multiplayer {
         BufferedReader from = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
         if (HoC.equals("host")) {
-            while (true) {
-                System.out.println(receive(from));
-            }
-        } else if (HoC.equals("hostami")) {
-            String str = "ciao";
-
-            while (true) {
-                send(str, to);
-            }
+            //estrazione del turno
+            //invio del turno estratto
+        } else if (HoC.equals("connettimi")) {
+            //ricezione del turno
         }
+
+        /**
+         * while(!giocoTerminato()){
+         *  if(turno==0){
+         *      attacco
+         *      if (cambioTurno)
+         *          turno = 1
+         *  }
+         *  else{
+         *      difesa
+         *      if (cambioTurno)
+         *          turno = 0
+         *  }
+         *
+         * */
 
     }
 
